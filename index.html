@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CPU Scheduling Simulator</h1>
+        <label for="algorithm">Choose Algorithm:</label>
+        <select id="algorithm">
+            <option value="fcfs">FCFS</option>
+            <option value="sjf">SJF (Non-Preemptive)</option>
+            <option value="srtf">SRTF (Preemptive SJF)</option>
+            <option value="rr">Round Robin</option>
+        </select>
+        <input type="number" id="timeQuantum" placeholder="Time Quantum (RR)" style="display:none;">
+        <br><br>
+        <textarea id="processInput" placeholder="Enter process details (PID,Arrival,Burst)"></textarea>
+        <br>
+        <button onclick="calculateSchedule()">Calculate</button>
+        <h2>Gantt Chart</h2>
+        <div id="ganttChart"></div>
+        <h2>Performance Metrics</h2>
+        <p id="metrics"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
